@@ -11,7 +11,7 @@ class Api{
     {
       headers.addAll({
         'Authorization' :'Bearer $token'
-      });//add all دى معناها انو هيضيف ماب
+      });
     }
     final dio = Dio();
     Response response = await dio.get(url,options: Options(headers: headers));
@@ -81,5 +81,3 @@ class Api{
     }
   }
 }
-//هنا معظم الهيدر بيكون ثابت مبيكونش فيه تغيير غير فى التوكن بس علشان الصلاحيه
-//@required دى معناها انها اوبشينال ممكن اليوزر يديهالى او لا

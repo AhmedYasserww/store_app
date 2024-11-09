@@ -6,7 +6,7 @@ import 'package:store_app2/widgets/custom_textFormfield.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 class UpdateProductPage extends StatefulWidget {
-   UpdateProductPage({super.key});
+   const UpdateProductPage({super.key});
   @override
   State<UpdateProductPage> createState() => _UpdateProductPageState();
 }
@@ -29,12 +29,12 @@ late ProductModel product; // Declare product here
         appBar: AppBar(
           centerTitle: true,
           //backgroundColor: Colors.transparent,
-          title: Text("Update product"),
+          title: const Text("Update product"),
         ),
         body: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: 100,),
+              const SizedBox(height: 100,),
               CustomTextField(
                 onChange:(data){
                   productName =data;

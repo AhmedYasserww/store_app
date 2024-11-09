@@ -6,9 +6,7 @@ class CustomCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    //دى علشان اطبع اول كلمتين من الاسترنج
     List<String> words = product.title.split(' ');
-    // Take the first two words
     String firstTwoWords =
     words.length >= 2 ? '${words[0]} ${words[1]}' : product.title;
 
@@ -23,10 +21,10 @@ class CustomCard extends StatelessWidget {
 
             decoration: BoxDecoration(boxShadow: [
               BoxShadow(
-                  blurRadius: 40, // مدى حده الشادو او الحواف
+                  blurRadius: 40,
                   color: Colors.grey.withOpacity(.5),
-                  spreadRadius: 0,//الشادو هيتحرك قد اي مسافه
-                  offset: const Offset(10,10)//ابعاد الشادو
+                  spreadRadius: 0,
+                  offset: const Offset(10,10)
 
               )
             ]),
@@ -41,13 +39,13 @@ class CustomCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    Text(firstTwoWords,style: TextStyle(color:Colors.grey,fontSize:20),),
+                    Text(firstTwoWords,style: const TextStyle(color:Colors.grey,fontSize:20),),
                     const SizedBox(height: 3,),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(r'$''${product.price.toString()}'),
-                        Icon(Icons.favorite,color: Colors.red,)
+                        const Icon(Icons.favorite,color: Colors.red,)
                       ],)
                   ],),
               ),

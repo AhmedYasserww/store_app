@@ -1,5 +1,4 @@
 import '../models/product_model.dart';
-import 'package:dio/dio.dart';
 import 'package:store_app2/helper/api.dart';
 class AllProductServices
 {

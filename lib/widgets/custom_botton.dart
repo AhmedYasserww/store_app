@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 class CustomButton extends StatelessWidget {
-  CustomButton({super.key,required this.text,required this.onTap});
-  String  text;
-  Function()?onTap ;
+   const CustomButton({super.key,required this.text,required this.onTap});
+  final String  text;
+  final Function()?onTap ;
   @override
   Widget build(BuildContext context) {
     return  Padding(
@@ -17,7 +17,7 @@ class CustomButton extends StatelessWidget {
         child: GestureDetector(
 
           onTap:onTap,
-          child: Text(text,style: TextStyle(fontSize: 25,color: Colors.white,),
+          child: Text(text,style: const TextStyle(fontSize: 25,color: Colors.white,),
         ),
       ),
       ) );

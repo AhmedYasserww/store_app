@@ -31,7 +31,6 @@ class ProductModel {
 
 
 }
-//كل ما اقابل ماب بعاملها على انها موديل
 class RatingModel{
   final double rate;
   final int count ;

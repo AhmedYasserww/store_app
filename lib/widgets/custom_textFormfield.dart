@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   CustomTextField({super.key,this.hintText,this.onChange,this.inputType});

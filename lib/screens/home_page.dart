@@ -1,11 +1,10 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:store_app2/models/product_model.dart';
 import 'package:store_app2/services/get_all_product_services.dart';
 import 'package:store_app2/widgets/custom_card.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({Key? key});
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -20,7 +19,7 @@ class HomePage extends StatelessWidget {
         title: const Text("New Trend"),
       ),
       body: Padding(
-        padding: EdgeInsets.only(top: 60, left: 16, right: 16),
+        padding:const EdgeInsets.only(top: 60, left: 16, right: 16),
         child: FutureBuilder<List<ProductModel>>(
           future: AllProductServices().getAllProduct(),
           builder: (context, snapshot) {
@@ -29,7 +28,7 @@ class HomePage extends StatelessWidget {
               return GridView.builder(
                 clipBehavior: Clip.none,
                 itemCount: products.length,
-                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                   crossAxisCount: 2,
                   mainAxisSpacing: 60,
                   crossAxisSpacing: 10,
@@ -39,7 +38,7 @@ class HomePage extends StatelessWidget {
                 },
               );
             } else {
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             }
           },
         ),
